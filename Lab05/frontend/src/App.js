@@ -44,7 +44,7 @@ function App() {
             <Switch>
                 <Route exact path={["/", "/movies"]} component={MoviesList} />
                 <Route path="/movies/:id/review" render={(props) => <AddReview {...props} user={user} />} />
-                <Route path="/movies/:id" component={Movie} />
+                <Route path="/movies/:id" render={(props) => <Movie {...props} user={user} />} />
                 <Route path="/login" render={(props) => <Login {...props} login={login} />} />
             </Switch>
         </div>

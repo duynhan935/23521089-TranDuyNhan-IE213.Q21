@@ -64,7 +64,7 @@ const Movie = props => {
                             return (
                                 <div key={index} className="mb-3 p-3 border rounded">
                                     <h5>
-                                        {review.user || "Anonymous"}
+                                        {review.user || review.user_id || review.name || "Anonymous"}
                                         <small className="text-muted"> - {moment(review.createdAt || review.date).format("YYYY-MM-DD HH:mm")}</small>
                                     </h5>
                                     <p>{review.review || review.text || "No review text"}</p>
